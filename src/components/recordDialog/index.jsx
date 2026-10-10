@@ -152,7 +152,7 @@ const RecordDialog = ({ dialog, customers, plans, subscriptions, invoices, onClo
         return [[FiUsers, "Customer", customer?.company || "Customer removed"], [FiFileText, "Description", record.description], [FiCalendar, "Issued", formatDate(record.issued)], [FiCalendar, "Due date", formatDate(record.due)], [FiCreditCard, "Amount", formatCurrency(record.amount)]];
     };
 
-    const recordTitle = entity === "customer" ? record.company : entity === "plan" ? record.name : entity === "subscription" ? record.id.replace("sub-", "SUB-") : record.number || record.id;
+    const recordTitle = !record ? "" : entity === "customer" ? record.company : entity === "plan" ? record.name : entity === "subscription" ? record.id.replace("sub-", "SUB-") : record.number || record.id;
 
     return (
         <div className={styles.overlay} onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
