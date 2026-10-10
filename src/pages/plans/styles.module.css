@@ -1,0 +1,269 @@
+.plansPage {
+    width: min(100%, 1480px);
+    margin: 0 auto;
+
+    .summaryGrid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 13px;
+        margin-bottom: 27px;
+    }
+
+    .catalogHeading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 15px;
+
+        h2 { color: #30424e; font-size: 18px; font-weight: 710; }
+        p { margin-top: 3px; color: #828e98; font-size: 14px; }
+    }
+
+    .catalogFilters {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+
+    .searchBox {
+        display: flex;
+        width: min(260px, 24vw);
+        min-width: 170px;
+        height: 40px;
+        align-items: center;
+        gap: 8px;
+        padding: 0 10px;
+        color: #89949e;
+        background: #fff;
+        border: 1px solid #dfe4eb;
+        border-radius: 8px;
+
+        &:focus-within { border-color: #a9a3f2; box-shadow: 0 0 0 3px rgb(98 89 223 / 9%); }
+        svg { width: 16px; height: 16px; flex: 0 0 auto; }
+        input { width: 100%; min-width: 0; color: #354550; font-size: 14px; border: 0; outline: 0; }
+        input::placeholder { color: #9aa4ad; }
+    }
+
+    .selectBox {
+        display: flex;
+        min-width: 164px;
+        height: 40px;
+        align-items: center;
+        gap: 8px;
+        padding: 0 9px;
+        background: #fff;
+        border: 1px solid #dfe4eb;
+        border-radius: 8px;
+
+        > span { color: #87939d; font-size: 13px; }
+        select { width: 100%; min-width: 0; color: #4e5d68; font-size: 13px; background: transparent; border: 0; outline: 0; }
+        &:focus-within { border-color: #a9a3f2; box-shadow: 0 0 0 3px rgb(98 89 223 / 9%); }
+    }
+
+    .planGrid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .planCard {
+        position: relative;
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        padding: 20px 19px 0;
+        background: #fff;
+        border: 1px solid #e1e5ed;
+        border-top: 3px solid #796fea;
+        border-radius: 14px;
+        box-shadow: 0 5px 18px rgb(29 45 60 / 3%);
+        transition: border-color 180ms ease, box-shadow 180ms ease;
+
+        &:hover { border-color: #c9c7eb; box-shadow: 0 10px 26px rgb(30 43 59 / 8%); }
+        &.blue { border-top-color: #5a8ad2; }
+        &.orange { border-top-color: #e59b66; }
+        &.green { border-top-color: #5cae91; }
+        &.dark { border-top-color: #526575; }
+    }
+
+    .planTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .planIcon {
+        display: grid;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        color: #655edf;
+        background: #f0efff;
+        border-radius: 11px;
+        svg { width: 19px; height: 19px; }
+    }
+
+    .blue .planIcon { color: #477abf; background: #edf4ff; }
+    .orange .planIcon { color: #ba7844; background: #fff2e7; }
+    .green .planIcon { color: #378369; background: #e9f6ef; }
+    .dark .planIcon { color: #455867; background: #eef1f4; }
+
+    .moreButton {
+        display: grid;
+        width: 35px;
+        height: 35px;
+        place-items: center;
+        color: #77848e;
+        background: #fff;
+        border: 1px solid #e2e6ec;
+        border-radius: 9px;
+        svg { width: 16px; height: 16px; }
+        &:hover { color: #514abc; border-color: #c9c6f2; box-shadow: 0 3px 9px rgb(98 89 223 / 9%); }
+    }
+
+    .planName {
+        width: fit-content;
+        margin-top: 15px;
+        color: #2b3e4a;
+        font-size: 19px;
+        font-weight: 720;
+        text-align: left;
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        &:hover { color: #514abc; box-shadow: none; }
+    }
+
+    .planDescription {
+        min-height: 42px;
+        margin-top: 4px;
+        color: #7b8893;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .priceLine {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        margin-top: 17px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #edf0f4;
+
+        strong { color: #273b48; font-size: 28px; font-weight: 750; letter-spacing: -0.8px; }
+        span { color: #85919c; font-size: 14px; }
+    }
+
+    .planRules {
+        display: grid;
+        gap: 9px;
+        padding: 15px 0;
+        border-bottom: 1px solid #edf0f4;
+
+        span { display: flex; align-items: center; gap: 8px; color: #60707b; font-size: 14px; }
+        svg { width: 16px; height: 16px; color: #7d77d8; }
+    }
+
+    .planStats {
+        display: grid;
+        grid-template-columns: 1fr 1.25fr;
+        gap: 10px;
+        padding: 15px 0;
+
+        > div { display: grid; gap: 3px; }
+        small { color: #8a959f; font-size: 13px; }
+        strong { color: #364955; font-size: 16px; font-weight: 700; }
+    }
+
+    .planActions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 9px;
+        margin: auto -19px 0;
+        padding: 11px 16px;
+        border-top: 1px solid #edf0f4;
+
+        button {
+            display: inline-flex;
+            min-height: 34px;
+            align-items: center;
+            gap: 6px;
+            padding: 0 8px;
+            color: #5c55c5;
+            font-size: 13px;
+            font-weight: 650;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 7px;
+            svg { width: 15px; height: 15px; }
+            &:hover { background: #f5f4ff; border-color: #e7e5ff; box-shadow: none; }
+        }
+
+        .deleteButton { width: 36px; justify-content: center; color: #a75b66; }
+        .deleteButton:hover { background: #fff4f5; border-color: #f1dfe2; }
+    }
+
+    .emptyState {
+        display: grid;
+        min-height: 280px;
+        grid-column: 1 / -1;
+        align-content: center;
+        justify-items: center;
+        gap: 8px;
+        color: #74818c;
+        text-align: center;
+
+        > svg { width: 34px; height: 34px; color: #8d87e8; }
+        strong { color: #334652; font-size: 16px; }
+        span { font-size: 14px; }
+        button { min-height: 36px; margin-top: 3px; padding: 0 10px; color: #5c55c5; font-size: 13px; background: #fff; border: 1px solid #e4e2f7; border-radius: 8px; }
+        button:hover { background: #f6f5ff; border-color: #cbc7f3; box-shadow: 0 3px 9px rgb(98 89 223 / 9%); }
+    }
+
+    .catalogFootnote {
+        margin-top: 14px;
+        color: #87939d;
+        font-size: 13px;
+    }
+
+    .secondaryButton,
+    .primaryButton {
+        display: inline-flex;
+        min-height: 42px;
+        align-items: center;
+        gap: 8px;
+        padding: 0 13px;
+        font-size: 14px;
+        font-weight: 640;
+        border: 1px solid transparent;
+        border-radius: 9px;
+        svg { width: 16px; height: 16px; }
+        &:hover { box-shadow: 0 4px 12px rgb(24 45 53 / 10%); }
+    }
+
+    .secondaryButton { color: #52616c; background: #fff; border-color: #dfe4eb; &:hover { border-color: #b9c2cc; } }
+    .primaryButton { color: #fff; background: var(--color-primary); border-color: var(--color-primary); &:hover { background: var(--color-primary-dark); border-color: var(--color-primary-dark); box-shadow: 0 5px 14px rgb(98 89 223 / 20%); } }
+
+    @media (max-width: 1120px) {
+        .planGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .summaryGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 760px) {
+        .catalogHeading { align-items: flex-start; flex-direction: column; }
+        .catalogFilters { width: 100%; }
+        .searchBox { width: auto; flex: 1; }
+    }
+
+    @media (max-width: 560px) {
+        .summaryGrid { grid-template-columns: 1fr 1fr; gap: 9px; }
+        .planGrid { grid-template-columns: 1fr; }
+        .catalogFilters { align-items: stretch; flex-direction: column; }
+        .searchBox { width: 100%; flex: auto; }
+        .selectBox { width: 100%; }
+    }
+}
