@@ -1,0 +1,443 @@
+.overlay {
+    position: fixed;
+    z-index: 80;
+    inset: 0;
+    display: grid;
+    padding: 24px;
+    place-items: center;
+    background: rgb(19 31 43 / 45%);
+    backdrop-filter: blur(5px);
+
+    .dialog {
+        width: min(100%, 640px);
+        max-height: min(88vh, 850px);
+        overflow: auto;
+        background: #fff;
+        border: 1px solid rgb(255 255 255 / 80%);
+        border-radius: 20px;
+        box-shadow: 0 26px 80px rgb(18 28 42 / 24%);
+        animation: open 180ms ease-out;
+    }
+
+    .detailDialog {
+        width: min(100%, 590px);
+    }
+
+    .dialogHeader {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 23px 25px 19px;
+        border-bottom: 1px solid #ebedf2;
+    }
+
+    .titleBlock {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        gap: 13px;
+
+        h2 {
+            color: #243543;
+            font-size: 20px;
+            font-weight: 730;
+            letter-spacing: -0.4px;
+        }
+
+        p {
+            margin-top: 4px;
+            color: #76838e;
+            font-size: 14px;
+        }
+    }
+
+    .titleIcon {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        flex: 0 0 auto;
+        place-items: center;
+        color: var(--color-primary);
+        background: #f0efff;
+        border-radius: 12px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .closeButton {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        flex: 0 0 auto;
+        place-items: center;
+        color: #77838f;
+        background: #fff;
+        border: 1px solid #e0e5ec;
+        border-radius: 10px;
+
+        &:hover {
+            color: #293947;
+            border-color: #bbc4ce;
+            box-shadow: 0 3px 10px rgb(24 45 53 / 8%);
+        }
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .form {
+        padding: 21px 25px 0;
+    }
+
+    .fields {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 17px 16px;
+    }
+
+    .field {
+        display: grid;
+        min-width: 0;
+        align-content: start;
+        gap: 7px;
+
+        > span:first-child {
+            color: #4b5a65;
+            font-size: 14px;
+            font-weight: 630;
+        }
+
+        b {
+            color: var(--color-danger);
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            min-height: 43px;
+            padding: 9px 11px;
+            color: #293b48;
+            font-size: 14px;
+            background: #fff;
+            border: 1px solid #dfe4eb;
+            border-radius: 9px;
+            outline: 0;
+            transition: border-color 180ms ease, box-shadow 180ms ease;
+
+            &:focus {
+                border-color: #938df0;
+                box-shadow: 0 0 0 3px rgb(98 89 223 / 11%);
+            }
+
+            &[aria-invalid="true"] {
+                border-color: #d98b98;
+            }
+
+            &::placeholder {
+                color: #9aa4ae;
+            }
+        }
+
+        textarea {
+            min-height: 86px;
+            line-height: 1.45;
+        }
+
+        select {
+            padding-right: 34px;
+        }
+    }
+
+    .wide {
+        grid-column: 1 / -1;
+    }
+
+    .inputWrap {
+        position: relative;
+        display: block;
+
+        &.withPrefix input {
+            padding-left: 28px;
+        }
+    }
+
+    .prefix {
+        position: absolute;
+        z-index: 1;
+        top: 9px;
+        left: 11px;
+        color: #73808c;
+        font-size: 14px;
+        pointer-events: none;
+    }
+
+    .errorText {
+        color: #b14e5d;
+        font-size: 13px;
+    }
+
+    .dialogFooter {
+        display: flex;
+        min-height: 74px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 23px;
+        padding: 14px 25px;
+        border-top: 1px solid #ebedf2;
+    }
+
+    .form .dialogFooter {
+        margin-right: -25px;
+        margin-left: -25px;
+    }
+
+    .requiredHint {
+        color: #84909b;
+        font-size: 13px;
+    }
+
+    .footerActions {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+
+    .secondaryButton,
+    .primaryButton,
+    .deleteButton {
+        display: inline-flex;
+        min-height: 41px;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        padding: 0 14px;
+        font-size: 14px;
+        font-weight: 620;
+        border: 1px solid transparent;
+        border-radius: 9px;
+
+        &:hover {
+            box-shadow: 0 4px 13px rgb(24 45 53 / 10%);
+        }
+    }
+
+    .secondaryButton {
+        color: #55636e;
+        background: #fff;
+        border-color: #dfe4eb;
+
+        &:hover {
+            border-color: #bdc6d0;
+        }
+    }
+
+    .primaryButton {
+        color: #fff;
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+
+        &:hover {
+            background: var(--color-primary-dark);
+            border-color: var(--color-primary-dark);
+            box-shadow: 0 5px 14px rgb(98 89 223 / 20%);
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .deleteButton {
+        color: var(--color-danger);
+        background: #fff;
+        border-color: #f0d5d9;
+
+        &:hover {
+            background: #fff8f8;
+            border-color: #d99ba4;
+        }
+    }
+
+    .detailTop {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 22px 25px;
+        background: #fafbfe;
+        border-bottom: 1px solid #ebedf2;
+    }
+
+    .detailName {
+        color: #344550;
+        font-size: 16px;
+        font-weight: 630;
+    }
+
+    .status {
+        display: inline-flex;
+        width: fit-content;
+        min-height: 26px;
+        align-items: center;
+        padding: 2px 9px;
+        color: #5562aa;
+        font-size: 13px;
+        font-weight: 650;
+        background: #eff0ff;
+        border-radius: 7px;
+        text-transform: capitalize;
+
+        &.active,
+        &.paid {
+            color: #26775f;
+            background: #e7f5ee;
+        }
+
+        &.past-due,
+        &.overdue {
+            color: #a84659;
+            background: #fbecef;
+        }
+
+        &.trial,
+        &.open {
+            color: #a36d1e;
+            background: #fff3dc;
+        }
+
+        &.canceled,
+        &.draft {
+            color: #697681;
+            background: #eef1f4;
+        }
+    }
+
+    .detailGrid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+        padding: 6px 25px;
+    }
+
+    .detailItem {
+        display: flex;
+        min-width: 0;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 4px;
+        border-bottom: 1px solid #edf0f4;
+
+        > span:last-child {
+            display: grid;
+            min-width: 0;
+            gap: 3px;
+        }
+
+        small {
+            color: #83909b;
+            font-size: 13px;
+        }
+
+        strong {
+            overflow-wrap: anywhere;
+            color: #394b57;
+            font-size: 14px;
+            font-weight: 620;
+        }
+    }
+
+    .detailIcon {
+        display: grid;
+        width: 32px;
+        height: 32px;
+        flex: 0 0 auto;
+        place-items: center;
+        color: #6e68d7;
+        background: #f0efff;
+        border-radius: 9px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    @keyframes open {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 620px) {
+        padding: 12px;
+
+        .dialog {
+            max-height: 92vh;
+            border-radius: 16px;
+        }
+
+        .dialogHeader {
+            padding: 18px 17px 15px;
+        }
+
+        .titleBlock h2 {
+            font-size: 18px;
+        }
+
+        .form {
+            padding: 18px 17px 0;
+        }
+
+        .fields {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        .wide {
+            grid-column: auto;
+        }
+
+        .form .dialogFooter {
+            margin-right: -17px;
+            margin-left: -17px;
+        }
+
+        .dialogFooter {
+            min-height: 68px;
+            flex-wrap: wrap;
+            padding: 12px 17px;
+        }
+
+        .requiredHint {
+            display: none;
+        }
+
+        .detailGrid {
+            grid-template-columns: 1fr;
+            padding: 6px 17px;
+        }
+
+        .detailTop {
+            padding: 18px 17px;
+        }
+
+        .deleteButton {
+            min-width: 78px;
+        }
+
+        .footerActions {
+            margin-left: auto;
+        }
+    }
+}
