@@ -1,3 +1,9 @@
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .loading {
     display: grid;
     min-height: 320px;
@@ -11,12 +17,6 @@
         border-right-color: #9c96f3;
         border-radius: 50%;
         animation: spin 850ms linear infinite;
-    }
-
-    @keyframes spin {
-        to {
-            transform: rotate(360deg);
-        }
     }
 
     @media (prefers-reduced-motion: reduce) {
