@@ -1,0 +1,81 @@
+.metricCard {
+    min-width: 0;
+    padding: 17px 18px 16px;
+    background: #fff;
+    border: 1px solid #e2e6ed;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgb(29 45 60 / 3%);
+
+    .topLine {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 9px;
+    }
+
+    .icon {
+        display: grid;
+        width: 37px;
+        height: 37px;
+        place-items: center;
+        color: #665edf;
+        background: #f0efff;
+        border-radius: 10px;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .label {
+        margin-top: 13px;
+        color: #74818c;
+        font-size: 14px;
+    }
+
+    .value {
+        display: block;
+        margin-top: 2px;
+        color: #273946;
+        font-size: clamp(22px, 2vw, 27px);
+        font-weight: 730;
+        letter-spacing: -0.7px;
+        line-height: 1.25;
+    }
+
+    .detail {
+        margin-top: 5px;
+        color: #89949e;
+        font-size: 13px;
+    }
+
+    .trend {
+        padding: 4px 7px;
+        color: #267b62;
+        font-size: 13px;
+        font-weight: 650;
+        background: #eaf6ee;
+        border-radius: 6px;
+    }
+
+    &.orange .icon {
+        color: #bb753b;
+        background: #fff2e6;
+    }
+
+    &.green .icon {
+        color: #258167;
+        background: #e8f6ef;
+    }
+
+    &.rose .icon {
+        color: #b34f5d;
+        background: #fff0f2;
+    }
+
+    &.blue .icon {
+        color: #3f75bf;
+        background: #edf4ff;
+    }
+}
