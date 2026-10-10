@@ -1,0 +1,325 @@
+.invoicesPage {
+    width: min(100%, 1480px);
+    margin: 0 auto;
+
+    .summaryGrid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 13px;
+        margin-bottom: 18px;
+    }
+
+    .ledgerPanel {
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid #e2e6ed;
+        border-radius: 15px;
+        box-shadow: 0 5px 18px rgb(29 45 60 / 3%);
+    }
+
+    .panelHeading {
+        display: flex;
+        min-height: 73px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 14px 20px;
+        border-bottom: 1px solid #edf0f4;
+
+        h2 {
+            color: #2d3f4b;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        p {
+            margin-top: 3px;
+            color: #82909a;
+            font-size: 13px;
+        }
+    }
+
+    .ledgerMark {
+        display: inline-flex;
+        min-height: 32px;
+        align-items: center;
+        gap: 7px;
+        padding: 0 9px;
+        color: #6e67d0;
+        font-size: 13px;
+        font-weight: 620;
+        background: #f3f2ff;
+        border: 1px solid #e8e6ff;
+        border-radius: 8px;
+
+        svg { width: 15px; height: 15px; }
+    }
+
+    .toolbar {
+        display: flex;
+        min-height: 66px;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 18px;
+        background: #fcfcfe;
+        border-bottom: 1px solid #edf0f4;
+    }
+
+    .searchBox {
+        display: flex;
+        width: min(380px, 42vw);
+        min-width: 210px;
+        height: 40px;
+        align-items: center;
+        gap: 8px;
+        padding: 0 10px;
+        color: #8b96a0;
+        background: #fff;
+        border: 1px solid #dfe4eb;
+        border-radius: 8px;
+
+        &:focus-within { border-color: #a9a3f2; box-shadow: 0 0 0 3px rgb(98 89 223 / 9%); }
+        svg { width: 16px; height: 16px; flex: 0 0 auto; }
+
+        input {
+            width: 100%;
+            min-width: 0;
+            color: #354550;
+            font-size: 14px;
+            border: 0;
+            outline: 0;
+
+            &::placeholder { color: #9aa4ad; }
+        }
+    }
+
+    .selectBox {
+        display: flex;
+        min-width: 160px;
+        height: 40px;
+        align-items: center;
+        gap: 8px;
+        padding: 0 9px;
+        background: #fff;
+        border: 1px solid #dfe4eb;
+        border-radius: 8px;
+
+        > span { color: #87939d; font-size: 13px; }
+
+        select {
+            width: 100%;
+            min-width: 0;
+            color: #4e5d68;
+            font-size: 13px;
+            background: transparent;
+            border: 0;
+            outline: 0;
+        }
+
+        &:focus-within { border-color: #a9a3f2; box-shadow: 0 0 0 3px rgb(98 89 223 / 9%); }
+    }
+
+    .clearButton {
+        min-height: 38px;
+        margin-left: auto;
+        padding: 0 8px;
+        color: #5f57c9;
+        font-size: 13px;
+        font-weight: 630;
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 7px;
+
+        &:hover { background: #f4f3ff; border-color: #e6e4ff; box-shadow: none; }
+    }
+
+    .tableScroll {
+        width: 100%;
+        overflow: auto;
+
+        table { width: 100%; min-width: 1090px; text-align: left; }
+
+        th {
+            height: 43px;
+            padding: 0 12px;
+            color: #85919b;
+            font-size: 13px;
+            font-weight: 650;
+            background: #fbfcfd;
+            border-bottom: 1px solid #e9edf1;
+        }
+
+        td {
+            height: 68px;
+            padding: 8px 12px;
+            color: #596873;
+            font-size: 13px;
+            vertical-align: middle;
+            border-bottom: 1px solid #edf0f4;
+
+            small { display: block; margin-top: 3px; color: #89949e; font-size: 13px; }
+        }
+
+        tbody tr:hover { background: #fcfcff; }
+        tbody tr:last-child td { border-bottom: 0; }
+    }
+
+    .recordLink {
+        padding: 2px 3px;
+        color: #5851c5;
+        font-size: 14px;
+        font-weight: 680;
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        &:hover { color: #413bab; box-shadow: 0 2px 7px rgb(98 89 223 / 8%); }
+    }
+
+    .customerButton {
+        display: grid;
+        gap: 2px;
+        text-align: left;
+        background: transparent;
+        border: 0;
+        border-radius: 6px;
+
+        &:hover { box-shadow: none; }
+        &:hover strong { color: var(--color-primary-dark); }
+        strong { color: #394a56; font-size: 14px; font-weight: 620; }
+        small { color: #87939d; font-size: 13px; }
+    }
+
+    .amount {
+        color: #344550;
+        font-weight: 680;
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .rowActions {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+    }
+
+    .markPaid,
+    .reminderButton {
+        display: inline-flex;
+        min-height: 33px;
+        align-items: center;
+        gap: 5px;
+        padding: 0 8px;
+        font-size: 13px;
+        font-weight: 630;
+        border: 1px solid transparent;
+        border-radius: 7px;
+
+        svg { width: 14px; height: 14px; }
+        &:hover { box-shadow: 0 3px 9px rgb(24 45 53 / 8%); }
+    }
+
+    .markPaid {
+        color: #25775f;
+        background: #eaf6ef;
+        border-color: #d9efe3;
+
+        &:hover { background: #e1f3e9; border-color: #c9e8d8; }
+    }
+
+    .reminderButton {
+        color: #826323;
+        background: #fff8e9;
+        border-color: #f3e7c6;
+
+        &:hover { background: #fff3d7; border-color: #eadbb2; }
+        &:disabled { color: #86928c; background: #f1f4f1; border-color: #e5e9e5; box-shadow: none; }
+    }
+
+    .iconButton {
+        display: grid;
+        width: 32px;
+        height: 32px;
+        place-items: center;
+        color: #74818d;
+        background: #fff;
+        border: 1px solid transparent;
+        border-radius: 8px;
+
+        svg { width: 15px; height: 15px; }
+        &:hover { color: #4f48bf; background: #f4f3ff; border-color: #e5e3ff; box-shadow: none; }
+    }
+
+    .emptyState {
+        display: grid;
+        min-height: 190px;
+        align-content: center;
+        justify-items: center;
+        gap: 6px;
+        color: #72808b;
+        font-size: 14px;
+
+        strong { color: #344652; font-size: 15px; }
+
+        button {
+            min-height: 36px;
+            margin-top: 4px;
+            padding: 0 11px;
+            color: #5a53c5;
+            font-size: 13px;
+            background: #fff;
+            border: 1px solid #e1e2f5;
+            border-radius: 8px;
+
+            &:hover { background: #f6f5ff; box-shadow: 0 4px 11px rgb(98 89 223 / 9%); }
+        }
+    }
+
+    .panelFooter {
+        display: flex;
+        min-height: 45px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 0 18px;
+        color: #8a959e;
+        font-size: 13px;
+        background: #fcfcfd;
+        border-top: 1px solid #edf0f4;
+    }
+
+    .secondaryButton,
+    .primaryButton {
+        display: inline-flex;
+        min-height: 42px;
+        align-items: center;
+        gap: 8px;
+        padding: 0 13px;
+        font-size: 14px;
+        font-weight: 640;
+        border: 1px solid transparent;
+        border-radius: 9px;
+        svg { width: 16px; height: 16px; }
+        &:hover { box-shadow: 0 4px 12px rgb(24 45 53 / 10%); }
+    }
+
+    .secondaryButton { color: #52616c; background: #fff; border-color: #dfe4eb; &:hover { border-color: #b9c2cc; } }
+    .primaryButton { color: #fff; background: var(--color-primary); border-color: var(--color-primary); &:hover { background: var(--color-primary-dark); border-color: var(--color-primary-dark); box-shadow: 0 5px 14px rgb(98 89 223 / 20%); } }
+
+    @media (max-width: 1200px) {
+        .summaryGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .toolbar { flex-wrap: wrap; }
+        .searchBox { flex: 1 1 270px; }
+        .clearButton { margin-left: 0; }
+    }
+
+    @media (max-width: 600px) {
+        .summaryGrid { gap: 9px; }
+        .panelHeading { align-items: flex-start; }
+        .toolbar { align-items: stretch; padding: 11px 12px; }
+        .searchBox { width: 100%; min-width: 100%; }
+        .selectBox { flex: 1 1 140px; }
+        .panelFooter { align-items: flex-start; flex-direction: column; justify-content: center; padding-top: 8px; padding-bottom: 8px; }
+    }
+}
