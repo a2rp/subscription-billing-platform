@@ -1,9 +1,18 @@
 import styles from "./styles.module.css";
 
-const MetricCard = ({ label, value, detail, icon: Icon, tone = "violet", trend }) => (
+const MetricCard = ({
+    label,
+    value,
+    detail,
+    icon: Icon,
+    tone = "violet",
+    trend,
+}) => (
     <article className={`${styles.metricCard} ${styles[tone] || ""}`}>
         <div className={styles.topLine}>
-            <span className={styles.icon}>{Icon && <Icon aria-hidden="true" />}</span>
+            <span className={styles.icon}>
+                {Icon && <Icon aria-hidden="true" />}
+            </span>
             {trend && <span className={styles.trend}>{trend}</span>}
         </div>
         <p className={styles.label}>{label}</p>

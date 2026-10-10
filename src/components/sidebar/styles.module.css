@@ -320,7 +320,9 @@
         background: rgb(15 25 38 / 50%);
         border: 0;
         opacity: 0;
-        transition: opacity 180ms ease, visibility 180ms ease;
+        transition:
+            opacity 180ms ease,
+            visibility 180ms ease;
 
         &.visible {
             visibility: visible;

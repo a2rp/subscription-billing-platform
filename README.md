@@ -6,15 +6,15 @@ Ledgerline is a subscription billing workspace for reviewing recurring revenue, 
 
 ## Workspace pages
 
-| Page | Route | What it contains |
-| --- | --- | --- |
-| Billing overview | `/` | Revenue summary, trend, upcoming renewals, and recent invoices |
-| Subscriptions | `/subscriptions` | Searchable subscription register with status and plan filters |
-| Invoices | `/invoices` | Invoice ledger, balances, payment actions, and CSV export |
-| Customers | `/customers` | Account directory with customer profiles and billing history |
-| Plans | `/plans` | Plan catalog, pricing, terms, and linked account totals |
-| Revenue report | `/reports` | Collected revenue, open balances, and a period-based breakdown |
-| Not found | Any unrecognized route | A return path to the billing workspace |
+| Page             | Route                  | What it contains                                               |
+| ---------------- | ---------------------- | -------------------------------------------------------------- |
+| Billing overview | `/`                    | Revenue summary, trend, upcoming renewals, and recent invoices |
+| Subscriptions    | `/subscriptions`       | Searchable subscription register with status and plan filters  |
+| Invoices         | `/invoices`            | Invoice ledger, balances, payment actions, and CSV export      |
+| Customers        | `/customers`           | Account directory with customer profiles and billing history   |
+| Plans            | `/plans`               | Plan catalog, pricing, terms, and linked account totals        |
+| Revenue report   | `/reports`             | Collected revenue, open balances, and a period-based breakdown |
+| Not found        | Any unrecognized route | A return path to the billing workspace                         |
 
 ## What works
 
@@ -55,55 +55,55 @@ These captures show the current workspace pages and the dialogs available from t
 
 ### Pages
 
-| Page | Capture |
-| --- | --- |
+| Page             | Capture                                                                                                                                                    |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Billing overview | <img src="./screenshots/pages/overview.png" alt="Ledgerline billing overview with recurring revenue, renewal schedule, and recent invoices" width="620" /> |
-| Subscriptions | <img src="./screenshots/pages/subscriptions.png" alt="Subscription register with status, renewal, and plan details" width="620" /> |
-| Invoices | <img src="./screenshots/pages/invoices.png" alt="Invoice ledger with balances, statuses, and payment actions" width="620" /> |
-| Customers | <img src="./screenshots/pages/customers.png" alt="Customer directory and selected billing profile" width="620" /> |
-| Plans | <img src="./screenshots/pages/plans.png" alt="Subscription plan catalog and plan terms" width="620" /> |
-| Revenue report | <img src="./screenshots/pages/revenue-report.png" alt="Revenue report with collected and outstanding billing totals" width="620" /> |
-| Not found | <img src="./screenshots/pages/not-found.png" alt="Not found page with navigation back to billing" width="620" /> |
-| Mobile overview | <img src="./screenshots/pages/mobile-overview.png" alt="Ledgerline billing overview at a 390 pixel mobile viewport" width="300" /> |
+| Subscriptions    | <img src="./screenshots/pages/subscriptions.png" alt="Subscription register with status, renewal, and plan details" width="620" />                         |
+| Invoices         | <img src="./screenshots/pages/invoices.png" alt="Invoice ledger with balances, statuses, and payment actions" width="620" />                               |
+| Customers        | <img src="./screenshots/pages/customers.png" alt="Customer directory and selected billing profile" width="620" />                                          |
+| Plans            | <img src="./screenshots/pages/plans.png" alt="Subscription plan catalog and plan terms" width="620" />                                                     |
+| Revenue report   | <img src="./screenshots/pages/revenue-report.png" alt="Revenue report with collected and outstanding billing totals" width="620" />                        |
+| Not found        | <img src="./screenshots/pages/not-found.png" alt="Not found page with navigation back to billing" width="620" />                                           |
+| Mobile overview  | <img src="./screenshots/pages/mobile-overview.png" alt="Ledgerline billing overview at a 390 pixel mobile viewport" width="300" />                         |
 
 ### Customer dialogs
 
-| Dialog state | Capture |
-| --- | --- |
-| Create customer | <img src="./screenshots/modals/customer-create.png" alt="New customer form" width="620" /> |
+| Dialog state          | Capture                                                                                                                           |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Create customer       | <img src="./screenshots/modals/customer-create.png" alt="New customer form" width="620" />                                        |
 | Invalid billing email | <img src="./screenshots/modals/customer-email-validation.png" alt="Customer form showing billing email validation" width="620" /> |
-| Edit customer | <img src="./screenshots/modals/customer-edit.png" alt="Edit customer form" width="620" /> |
-| Customer details | <img src="./screenshots/modals/customer-details.png" alt="Customer billing profile details dialog" width="620" /> |
-| Delete confirmation | <img src="./screenshots/modals/customer-delete-confirm.png" alt="Confirmation before deleting a customer" width="620" /> |
+| Edit customer         | <img src="./screenshots/modals/customer-edit.png" alt="Edit customer form" width="620" />                                         |
+| Customer details      | <img src="./screenshots/modals/customer-details.png" alt="Customer billing profile details dialog" width="620" />                 |
+| Delete confirmation   | <img src="./screenshots/modals/customer-delete-confirm.png" alt="Confirmation before deleting a customer" width="620" />          |
 
 ### Plan dialogs
 
-| Dialog state | Capture |
-| --- | --- |
-| Create plan | <img src="./screenshots/modals/plan-create.png" alt="New plan form" width="620" /> |
-| Plan details | <img src="./screenshots/modals/plan-details.png" alt="Plan terms and linked subscriptions dialog" width="620" /> |
-| Edit plan | <img src="./screenshots/modals/plan-edit.png" alt="Edit plan form" width="620" /> |
+| Dialog state        | Capture                                                                                                          |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Create plan         | <img src="./screenshots/modals/plan-create.png" alt="New plan form" width="620" />                               |
+| Plan details        | <img src="./screenshots/modals/plan-details.png" alt="Plan terms and linked subscriptions dialog" width="620" /> |
+| Edit plan           | <img src="./screenshots/modals/plan-edit.png" alt="Edit plan form" width="620" />                                |
 | Delete confirmation | <img src="./screenshots/modals/plan-delete-confirm.png" alt="Confirmation before deleting a plan" width="620" /> |
 
 ### Subscription dialogs
 
-| Dialog state | Capture |
-| --- | --- |
-| Create subscription | <img src="./screenshots/modals/subscription-create.png" alt="New subscription form" width="620" /> |
+| Dialog state         | Capture                                                                                                                               |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Create subscription  | <img src="./screenshots/modals/subscription-create.png" alt="New subscription form" width="620" />                                    |
 | Subscription details | <img src="./screenshots/modals/subscription-details.png" alt="Subscription status, account, plan, and renewal details" width="620" /> |
-| Edit subscription | <img src="./screenshots/modals/subscription-edit.png" alt="Edit subscription form" width="620" /> |
-| Delete confirmation | <img src="./screenshots/modals/subscription-delete-confirm.png" alt="Confirmation before deleting a subscription" width="620" /> |
-| Cancel confirmation | <img src="./screenshots/modals/subscription-cancel-confirm.png" alt="Confirmation before canceling a subscription" width="620" /> |
+| Edit subscription    | <img src="./screenshots/modals/subscription-edit.png" alt="Edit subscription form" width="620" />                                     |
+| Delete confirmation  | <img src="./screenshots/modals/subscription-delete-confirm.png" alt="Confirmation before deleting a subscription" width="620" />      |
+| Cancel confirmation  | <img src="./screenshots/modals/subscription-cancel-confirm.png" alt="Confirmation before canceling a subscription" width="620" />     |
 
 ### Invoice dialogs
 
-| Dialog state | Capture |
-| --- | --- |
-| Create invoice | <img src="./screenshots/modals/invoice-create.png" alt="New invoice form" width="620" /> |
-| Invalid date range | <img src="./screenshots/modals/invoice-date-validation.png" alt="Invoice form showing due date validation" width="620" /> |
-| Invoice details | <img src="./screenshots/modals/invoice-details.png" alt="Invoice amount, customer, and due date details" width="620" /> |
-| Edit invoice | <img src="./screenshots/modals/invoice-edit.png" alt="Edit invoice form" width="620" /> |
-| Delete confirmation | <img src="./screenshots/modals/invoice-delete-confirm.png" alt="Confirmation before deleting an invoice" width="620" /> |
+| Dialog state        | Capture                                                                                                                   |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Create invoice      | <img src="./screenshots/modals/invoice-create.png" alt="New invoice form" width="620" />                                  |
+| Invalid date range  | <img src="./screenshots/modals/invoice-date-validation.png" alt="Invoice form showing due date validation" width="620" /> |
+| Invoice details     | <img src="./screenshots/modals/invoice-details.png" alt="Invoice amount, customer, and due date details" width="620" />   |
+| Edit invoice        | <img src="./screenshots/modals/invoice-edit.png" alt="Edit invoice form" width="620" />                                   |
+| Delete confirmation | <img src="./screenshots/modals/invoice-delete-confirm.png" alt="Confirmation before deleting an invoice" width="620" />   |
 
 ## Future improvements
 

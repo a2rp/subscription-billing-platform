@@ -17,9 +17,15 @@ const AppRoutes = (props) => {
         <Suspense key={location.pathname} fallback={<Loading />}>
             <Routes>
                 <Route path="/" element={<OverviewPage {...props} />} />
-                <Route path="/subscriptions" element={<SubscriptionsPage {...props} />} />
+                <Route
+                    path="/subscriptions"
+                    element={<SubscriptionsPage {...props} />}
+                />
                 <Route path="/invoices" element={<InvoicesPage {...props} />} />
-                <Route path="/customers" element={<CustomersPage {...props} />} />
+                <Route
+                    path="/customers"
+                    element={<CustomersPage {...props} />}
+                />
                 <Route path="/plans" element={<PlansPage {...props} />} />
                 <Route path="/reports" element={<ReportsPage {...props} />} />
                 <Route path="*" element={<NotFoundPage />} />

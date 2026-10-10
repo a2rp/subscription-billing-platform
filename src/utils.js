@@ -1,8 +1,11 @@
 export const downloadCsv = (rows, filename) => {
     if (!rows.length) return false;
-    const escapeValue = (value) => `"${String(value ?? "").replaceAll('"', '""')}"`;
+    const escapeValue = (value) =>
+        `"${String(value ?? "").replaceAll('"', '""')}"`;
     const csv = rows.map((row) => row.map(escapeValue).join(",")).join("\r\n");
-    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+    const url = URL.createObjectURL(
+        new Blob([csv], { type: "text/csv;charset=utf-8" }),
+    );
     const link = document.createElement("a");
     link.href = url;
     link.download = filename;
@@ -15,7 +18,9 @@ export const downloadCsv = (rows, filename) => {
 
 export const getSubscriptionReference = (subscription) => {
     const match = subscription.id.match(/^sub-(\d+)$/);
-    return match ? `SUB-${match[1]}` : `SUB-${subscription.id.slice(-4).toUpperCase()}`;
+    return match
+        ? `SUB-${match[1]}`
+        : `SUB-${subscription.id.slice(-4).toUpperCase()}`;
 };
 
 export const getInvoiceReference = (invoice) => invoice.number || invoice.id;

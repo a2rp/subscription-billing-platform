@@ -127,7 +127,13 @@
         height: 202px;
         grid-template-columns: 38px minmax(0, 1fr);
         border-bottom: 1px solid #edf0f3;
-        background: repeating-linear-gradient(to bottom, transparent 0, transparent 48px, #edf0f3 49px, transparent 50px);
+        background: repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 48px,
+            #edf0f3 49px,
+            transparent 50px
+        );
     }
 
     .axisLabels {
@@ -174,7 +180,9 @@
         border: 1px solid rgb(78 70 193 / 15%);
         border-radius: 7px 7px 3px 3px;
         box-shadow: 0 4px 8px rgb(98 89 223 / 12%);
-        transition: filter 180ms ease, box-shadow 180ms ease;
+        transition:
+            filter 180ms ease,
+            box-shadow 180ms ease;
 
         &:hover {
             filter: saturate(1.25);
@@ -269,12 +277,30 @@
         border-radius: 50%;
         box-shadow: 0 0 0 1px #ececf2;
 
-        &.peach { color: #ad6548; background: #fff0e7; }
-        &.blue { color: #4572a9; background: #e8f2ff; }
-        &.amber { color: #926a24; background: #fff4d9; }
-        &.mint { color: #33775f; background: #e8f5ee; }
-        &.rose { color: #a24f69; background: #fcecf1; }
-        &.sky { color: #387995; background: #e5f5fb; }
+        &.peach {
+            color: #ad6548;
+            background: #fff0e7;
+        }
+        &.blue {
+            color: #4572a9;
+            background: #e8f2ff;
+        }
+        &.amber {
+            color: #926a24;
+            background: #fff4d9;
+        }
+        &.mint {
+            color: #33775f;
+            background: #e8f5ee;
+        }
+        &.rose {
+            color: #a24f69;
+            background: #fcecf1;
+        }
+        &.sky {
+            color: #387995;
+            background: #e5f5fb;
+        }
     }
 
     .renewalCopy,
@@ -482,7 +508,9 @@
         background: #fff;
         border-color: #dfe4eb;
 
-        &:hover { border-color: #b9c2cc; }
+        &:hover {
+            border-color: #b9c2cc;
+        }
     }
 
     .primaryButton {

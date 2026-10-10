@@ -19,10 +19,20 @@ const Toast = ({ toast, onDismiss }) => {
     const Icon = icons[toast.tone] || icons.success;
 
     return (
-        <div className={`${styles.toast} ${styles[toast.tone] || ""}`} role="status" aria-live="polite">
+        <div
+            className={`${styles.toast} ${styles[toast.tone] || ""}`}
+            role="status"
+            aria-live="polite"
+        >
             <Icon aria-hidden="true" />
             <span>{toast.message}</span>
-            <button type="button" aria-label="Dismiss notification" onClick={onDismiss}><FiX aria-hidden="true" /></button>
+            <button
+                type="button"
+                aria-label="Dismiss notification"
+                onClick={onDismiss}
+            >
+                <FiX aria-hidden="true" />
+            </button>
         </div>
     );
 };

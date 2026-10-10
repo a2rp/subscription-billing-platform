@@ -24,7 +24,10 @@
         background: #f0efff;
         border: 1px solid #e5e3ff;
         border-radius: 20px;
-        svg { width: 27px; height: 27px; }
+        svg {
+            width: 27px;
+            height: 27px;
+        }
     }
 
     strong {
@@ -70,15 +73,29 @@
             background: #fff;
             border: 1px solid #e1e2f4;
             border-radius: 9px;
-            svg { width: 16px; height: 16px; }
-            &:hover { background: #f5f4ff; border-color: #c8c5f1; box-shadow: 0 4px 12px rgb(98 89 223 / 10%); }
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+            &:hover {
+                background: #f5f4ff;
+                border-color: #c8c5f1;
+                box-shadow: 0 4px 12px rgb(98 89 223 / 10%);
+            }
         }
     }
 
     @media (max-width: 520px) {
         min-height: 480px;
-        .ticket { padding: 32px 18px; }
-        .actions { width: 100%; flex-direction: column; }
-        .actions a { justify-content: center; }
+        .ticket {
+            padding: 32px 18px;
+        }
+        .actions {
+            width: 100%;
+            flex-direction: column;
+        }
+        .actions a {
+            justify-content: center;
+        }
     }
 }
