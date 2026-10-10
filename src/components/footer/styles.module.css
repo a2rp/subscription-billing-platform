@@ -1,0 +1,125 @@
+.footer {
+    display: flex;
+    min-height: 82px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    margin-left: 252px;
+    padding: 15px 30px;
+    background: #fff;
+    border-top: 1px solid #e4e8ee;
+
+    .copyright {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        gap: 11px;
+        color: #77838e;
+        font-size: 13px;
+    }
+
+    .logoLink {
+        display: grid;
+        width: 30px;
+        height: 30px;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1px solid #e1e6ec;
+        border-radius: 8px;
+
+        &:hover {
+            border-color: #b8bfd0;
+            box-shadow: 0 3px 10px rgb(24 45 53 / 8%);
+        }
+
+        img {
+            width: 21px;
+            height: 21px;
+            object-fit: contain;
+        }
+    }
+
+    .nameLink {
+        padding: 0 4px;
+        color: #465660;
+
+        &:hover {
+            color: var(--color-primary-dark);
+        }
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 7px;
+    }
+
+    .socialLink {
+        display: grid;
+        width: 35px;
+        height: 35px;
+        place-items: center;
+        color: #788692;
+        border: 1px solid transparent;
+        border-radius: 9px;
+
+        &:hover,
+        &:focus-visible {
+            color: var(--color-primary-dark);
+            background: #f4f3ff;
+            border-color: #e5e2ff;
+            box-shadow: 0 3px 11px rgb(98 89 223 / 12%);
+        }
+
+        svg {
+            width: 17px;
+            height: 17px;
+        }
+    }
+
+    .tooltip {
+        z-index: 100;
+        padding: 9px 11px;
+        color: #fff;
+        font-size: 13px;
+        line-height: 1.5;
+        white-space: pre-line;
+        pointer-events: none;
+        background: #1d2833;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgb(15 26 38 / 24%);
+    }
+
+    @media (max-width: 1020px) {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+
+        .links {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (max-width: 760px) {
+        margin-left: 0;
+        padding: 16px 20px;
+    }
+
+    @media (max-width: 480px) {
+        .copyright {
+            align-items: flex-start;
+            font-size: 13px;
+        }
+
+        .links {
+            gap: 3px;
+        }
+
+        .socialLink {
+            width: 33px;
+            height: 33px;
+        }
+    }
+}
