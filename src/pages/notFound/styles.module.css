@@ -1,0 +1,84 @@
+.notFound {
+    display: grid;
+    min-height: 600px;
+    place-items: center;
+
+    .ticket {
+        display: grid;
+        max-width: 570px;
+        justify-items: center;
+        padding: 42px 30px;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #e2e6ed;
+        border-radius: 19px;
+        box-shadow: 0 15px 50px rgb(29 45 60 / 7%);
+    }
+
+    .icon {
+        display: grid;
+        width: 64px;
+        height: 64px;
+        place-items: center;
+        color: #6259df;
+        background: #f0efff;
+        border: 1px solid #e5e3ff;
+        border-radius: 20px;
+        svg { width: 27px; height: 27px; }
+    }
+
+    strong {
+        margin-top: 18px;
+        color: #9a97d8;
+        font-size: 14px;
+        font-weight: 750;
+        letter-spacing: 2px;
+    }
+
+    h1 {
+        margin-top: 5px;
+        color: #273a47;
+        font-size: clamp(23px, 4vw, 29px);
+        font-weight: 740;
+        letter-spacing: -0.6px;
+    }
+
+    p {
+        max-width: 420px;
+        margin-top: 10px;
+        color: #75828d;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 25px;
+
+        a {
+            display: inline-flex;
+            min-height: 42px;
+            align-items: center;
+            gap: 8px;
+            padding: 0 13px;
+            color: #5750c3;
+            font-size: 14px;
+            font-weight: 640;
+            background: #fff;
+            border: 1px solid #e1e2f4;
+            border-radius: 9px;
+            svg { width: 16px; height: 16px; }
+            &:hover { background: #f5f4ff; border-color: #c8c5f1; box-shadow: 0 4px 12px rgb(98 89 223 / 10%); }
+        }
+    }
+
+    @media (max-width: 520px) {
+        min-height: 480px;
+        .ticket { padding: 32px 18px; }
+        .actions { width: 100%; flex-direction: column; }
+        .actions a { justify-content: center; }
+    }
+}
