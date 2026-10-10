@@ -65,7 +65,7 @@ const getEntityLabel = (entity) => ({ customer: "customer", plan: "plan", subscr
 
 const RecordDialog = ({ dialog, customers, plans, subscriptions, invoices, onClose, onSave, onEdit, onDelete }) => {
     const { entity, mode, record } = dialog;
-    const [values, setValues] = useState(() => getInitialValues(entity, record, customers, plans));
+    const [values, setValues] = useState(() => getInitialValues(entity, dialog.initialValues || record, customers, plans));
     const [errors, setErrors] = useState({});
     const firstControlRef = useRef(null);
     const dialogRef = useRef(null);

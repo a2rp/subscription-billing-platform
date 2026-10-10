@@ -24,7 +24,7 @@ const App = () => {
         setToast({ id: Date.now(), message, tone });
     }, []);
 
-    const openCreate = useCallback((entity) => setDialog({ entity, mode: "create" }), []);
+    const openCreate = useCallback((entity, initialValues) => setDialog({ entity, mode: "create", initialValues }), []);
     const openEdit = useCallback((entity, record) => setDialog({ entity, mode: "edit", record }), []);
     const openDetails = useCallback((entity, record) => setDialog({ entity, mode: "details", record }), []);
     const closeDialog = useCallback(() => setDialog(null), []);
