@@ -15,8 +15,8 @@ const Sidebar = ({ isOpen, onClose, pastDueCount }) => {
     const location = useLocation();
 
     useEffect(() => {
-        if (isOpen) onClose();
-    }, [isOpen, onClose, location.pathname]);
+        onClose();
+    }, [location.pathname, onClose]);
 
     return (
         <>
