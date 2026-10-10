@@ -1,0 +1,61 @@
+export const initialPlans = [
+    { id: "plan-solo", name: "Solo", description: "For independent teams getting started", amount: 39, interval: "Monthly", trialDays: 14, seats: 3, color: "violet" },
+    { id: "plan-growth", name: "Growth", description: "More room for a growing customer base", amount: 89, interval: "Monthly", trialDays: 14, seats: 10, color: "blue" },
+    { id: "plan-studio", name: "Studio", description: "A flexible plan for established teams", amount: 179, interval: "Monthly", trialDays: 7, seats: 25, color: "orange" },
+    { id: "plan-scale", name: "Scale Annual", description: "Annual billing for larger operations", amount: 1590, interval: "Yearly", trialDays: 0, seats: 50, color: "green" },
+    { id: "plan-enterprise", name: "Enterprise", description: "Advanced support and a custom workflow", amount: 349, interval: "Monthly", trialDays: 30, seats: 100, color: "dark" },
+];
+
+export const initialCustomers = [
+    { id: "cus-orbit", name: "Nora Patel", company: "Orbit Labs", email: "nora@orbitlabs.co", location: "Austin, TX", joined: "2026-03-18", initials: "OL", color: "lilac" },
+    { id: "cus-juniper", name: "Miles Chen", company: "Juniper & Co.", email: "miles@juniperco.com", location: "Portland, OR", joined: "2026-04-02", initials: "JC", color: "peach" },
+    { id: "cus-northstar", name: "Alina Brooks", company: "Northstar Studio", email: "alina@northstar.studio", location: "Brooklyn, NY", joined: "2026-04-16", initials: "NS", color: "blue" },
+    { id: "cus-cinder", name: "Evan Walsh", company: "Cinder Works", email: "evan@cinderworks.io", location: "Denver, CO", joined: "2026-05-09", initials: "CW", color: "amber" },
+    { id: "cus-goodwell", name: "Priya Shah", company: "Goodwell Health", email: "priya@goodwell.health", location: "Chicago, IL", joined: "2026-05-21", initials: "GH", color: "mint" },
+    { id: "cus-kinfolk", name: "Theo Martin", company: "Kinfolk Market", email: "theo@kinfolk.market", location: "Nashville, TN", joined: "2026-06-03", initials: "KM", color: "rose" },
+    { id: "cus-morrow", name: "Asha Reed", company: "Morrow Design", email: "asha@morrow.design", location: "Seattle, WA", joined: "2026-06-28", initials: "MD", color: "violet" },
+    { id: "cus-pine", name: "Leo Kim", company: "Pine & Peak", email: "leo@pinepeak.com", location: "San Diego, CA", joined: "2026-07-11", initials: "PP", color: "sky" },
+];
+
+export const initialSubscriptions = [
+    { id: "sub-1048", customerId: "cus-orbit", planId: "plan-studio", status: "Active", started: "2026-03-18", renews: "2026-10-18", paymentMethod: "Visa ···· 4242" },
+    { id: "sub-1047", customerId: "cus-juniper", planId: "plan-growth", status: "Past due", started: "2026-04-02", renews: "2026-10-09", paymentMethod: "Mastercard ···· 8812" },
+    { id: "sub-1046", customerId: "cus-northstar", planId: "plan-scale", status: "Active", started: "2026-04-16", renews: "2027-04-16", paymentMethod: "Visa ···· 2408" },
+    { id: "sub-1045", customerId: "cus-cinder", planId: "plan-solo", status: "Trial", started: "2026-10-03", renews: "2026-10-17", paymentMethod: "Visa ···· 0331" },
+    { id: "sub-1044", customerId: "cus-goodwell", planId: "plan-enterprise", status: "Active", started: "2026-05-21", renews: "2026-10-21", paymentMethod: "Amex ···· 7005" },
+    { id: "sub-1043", customerId: "cus-kinfolk", planId: "plan-growth", status: "Active", started: "2026-06-03", renews: "2026-11-03", paymentMethod: "Visa ···· 9455" },
+    { id: "sub-1042", customerId: "cus-morrow", planId: "plan-studio", status: "Canceled", started: "2026-06-28", renews: "2026-09-28", paymentMethod: "Mastercard ···· 6042" },
+    { id: "sub-1041", customerId: "cus-pine", planId: "plan-growth", status: "Active", started: "2026-07-11", renews: "2026-10-11", paymentMethod: "Visa ···· 3490" },
+    { id: "sub-1040", customerId: "cus-orbit", planId: "plan-solo", status: "Active", started: "2026-08-20", renews: "2026-10-20", paymentMethod: "Visa ···· 4242" },
+    { id: "sub-1039", customerId: "cus-juniper", planId: "plan-solo", status: "Canceled", started: "2026-04-02", renews: "2026-08-09", paymentMethod: "Mastercard ···· 8812" },
+];
+
+export const initialInvoices = [
+    { id: "INV-2098", customerId: "cus-orbit", subscriptionId: "sub-1048", amount: 179, issued: "2026-10-01", due: "2026-10-18", status: "Open", description: "Studio plan · October" },
+    { id: "INV-2097", customerId: "cus-juniper", subscriptionId: "sub-1047", amount: 89, issued: "2026-10-01", due: "2026-10-09", status: "Overdue", description: "Growth plan · October" },
+    { id: "INV-2096", customerId: "cus-northstar", subscriptionId: "sub-1046", amount: 1590, issued: "2026-10-01", due: "2026-10-16", status: "Paid", description: "Scale Annual · Renewal" },
+    { id: "INV-2095", customerId: "cus-goodwell", subscriptionId: "sub-1044", amount: 349, issued: "2026-10-01", due: "2026-10-21", status: "Open", description: "Enterprise plan · October" },
+    { id: "INV-2094", customerId: "cus-kinfolk", subscriptionId: "sub-1043", amount: 89, issued: "2026-09-03", due: "2026-09-10", status: "Paid", description: "Growth plan · September" },
+    { id: "INV-2093", customerId: "cus-morrow", subscriptionId: "sub-1042", amount: 179, issued: "2026-09-01", due: "2026-09-08", status: "Paid", description: "Studio plan · Final cycle" },
+    { id: "INV-2092", customerId: "cus-pine", subscriptionId: "sub-1041", amount: 89, issued: "2026-09-11", due: "2026-09-18", status: "Paid", description: "Growth plan · September" },
+    { id: "INV-2091", customerId: "cus-orbit", subscriptionId: "sub-1040", amount: 39, issued: "2026-09-20", due: "2026-09-27", status: "Paid", description: "Solo plan · September" },
+    { id: "INV-2090", customerId: "cus-cinder", subscriptionId: "sub-1045", amount: 0, issued: "2026-10-03", due: "2026-10-17", status: "Draft", description: "Solo plan · Trial period" },
+    { id: "INV-2089", customerId: "cus-juniper", subscriptionId: "sub-1047", amount: 89, issued: "2026-09-01", due: "2026-09-08", status: "Paid", description: "Growth plan · September" },
+    { id: "INV-2088", customerId: "cus-northstar", subscriptionId: "sub-1046", amount: 1590, issued: "2025-10-01", due: "2025-10-16", status: "Paid", description: "Scale Annual · Annual term" },
+    { id: "INV-2087", customerId: "cus-goodwell", subscriptionId: "sub-1044", amount: 349, issued: "2026-09-01", due: "2026-09-08", status: "Paid", description: "Enterprise plan · September" },
+];
+
+export const formatCurrency = (amount, compact = false) => {
+    const options = { style: "currency", currency: "USD", maximumFractionDigits: 0 };
+    if (compact && Math.abs(amount) >= 1000) {
+        return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 1 }).format(amount);
+    }
+    return new Intl.NumberFormat("en-US", options).format(amount);
+};
+
+export const formatDate = (value, options = { month: "short", day: "numeric", year: "numeric" }) => {
+    if (!value) return "-";
+    return new Intl.DateTimeFormat("en-US", options).format(new Date(`${value}T12:00:00`));
+};
+
+export const makeId = (prefix) => `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
