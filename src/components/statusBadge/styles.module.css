@@ -1,0 +1,50 @@
+.badge {
+    display: inline-flex;
+    min-height: 27px;
+    align-items: center;
+    gap: 7px;
+    padding: 2px 9px;
+    color: #5b64a4;
+    font-size: 13px;
+    font-weight: 650;
+    white-space: nowrap;
+    background: #f0f1ff;
+    border: 1px solid #e8e9ff;
+    border-radius: 7px;
+
+    > span {
+        width: 6px;
+        height: 6px;
+        flex: 0 0 auto;
+        background: currentColor;
+        border-radius: 50%;
+    }
+
+    &.active,
+    &.paid {
+        color: #26785e;
+        background: #e9f6ef;
+        border-color: #dcf0e5;
+    }
+
+    &.trial,
+    &.open {
+        color: #9f6b20;
+        background: #fff5e3;
+        border-color: #f5e8c9;
+    }
+
+    &.past-due,
+    &.overdue {
+        color: #a84758;
+        background: #fff0f1;
+        border-color: #f4dfe2;
+    }
+
+    &.canceled,
+    &.draft {
+        color: #6b7782;
+        background: #f0f2f4;
+        border-color: #e5e8eb;
+    }
+}
