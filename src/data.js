@@ -43,6 +43,10 @@ export const initialInvoices = [
     { id: "INV-2089", customerId: "cus-juniper", subscriptionId: "sub-1047", amount: 89, issued: "2026-09-01", due: "2026-09-08", status: "Paid", description: "Growth plan · September" },
     { id: "INV-2088", customerId: "cus-northstar", subscriptionId: "sub-1046", amount: 1590, issued: "2025-10-01", due: "2025-10-16", status: "Paid", description: "Scale Annual · Annual term" },
     { id: "INV-2087", customerId: "cus-goodwell", subscriptionId: "sub-1044", amount: 349, issued: "2026-09-01", due: "2026-09-08", status: "Paid", description: "Enterprise plan · September" },
+    { id: "INV-2086", customerId: "cus-orbit", subscriptionId: "sub-1048", amount: 179, issued: "2026-05-01", due: "2026-05-08", status: "Paid", description: "Studio plan · May" },
+    { id: "INV-2085", customerId: "cus-juniper", subscriptionId: "sub-1047", amount: 89, issued: "2026-06-01", due: "2026-06-08", status: "Paid", description: "Growth plan · June" },
+    { id: "INV-2084", customerId: "cus-pine", subscriptionId: "sub-1041", amount: 89, issued: "2026-07-11", due: "2026-07-18", status: "Paid", description: "Growth plan · July" },
+    { id: "INV-2083", customerId: "cus-kinfolk", subscriptionId: "sub-1043", amount: 89, issued: "2026-08-03", due: "2026-08-10", status: "Paid", description: "Growth plan · August" },
 ];
 
 export const formatCurrency = (amount, compact = false) => {
