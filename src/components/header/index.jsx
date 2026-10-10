@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { FiChevronDown, FiFileText, FiLayers, FiMenu, FiPlus, FiSearch, FiUsers, FiRepeat, FiX, FiGithub } from "react-icons/fi";
+import { FiChevronDown, FiFileText, FiLayers, FiMenu, FiPlus, FiSearch, FiUsers, FiRepeat, FiGithub } from "react-icons/fi";
 import styles from "./styles.module.css";
 
 const pageNames = {
