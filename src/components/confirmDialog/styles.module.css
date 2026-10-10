@@ -1,3 +1,12 @@
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .overlay {
     position: fixed;
     z-index: 90;
@@ -126,15 +135,6 @@
             background: #983d4b;
             border-color: #983d4b;
             box-shadow: 0 5px 14px rgb(179 79 93 / 20%);
-        }
-    }
-
-    @keyframes show {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
         }
     }
 
